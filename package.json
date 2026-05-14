@@ -1,0 +1,8 @@
+{
+  "name": "noops-e2e-smoke",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix frontend run build"
+  }
+}
