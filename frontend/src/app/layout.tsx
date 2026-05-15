@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Noops E2E Smoke",
-  description: "Minimal deployment smoke app",
+  title: "noops-basic-template",
+  description: "Minimal noops-ready Next.js and PostgreSQL template",
 };
 
 export default function RootLayout({
@@ -16,4 +16,3 @@ export default function RootLayout({
     </html>
   );
 }
-

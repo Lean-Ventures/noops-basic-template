@@ -8,7 +8,7 @@ export default async function Home() {
   return (
     <main className="page">
       <section className="panel">
-        <p className="eyebrow">Noops E2E Smoke</p>
+        <p className="eyebrow">noops-basic-template</p>
         <h1>Next.js + PostgreSQL are wired together.</h1>
         <p>
           This small app exists to verify repository import, service deployment,
