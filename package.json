@@ -1,5 +1,5 @@
 {
-  "name": "noops-e2e-smoke",
+  "name": "noops-basic-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {

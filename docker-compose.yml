@@ -13,24 +13,14 @@ services:
       timeout: 5s
       retries: 10
 
-  backend:
-    build:
-      context: ./backend
-    environment:
-      DATABASE_URL: postgresql://smoke:smoke@db:5432/smoke
-    ports:
-      - "18000:8000"
-    depends_on:
-      db:
-        condition: service_healthy
-
-  frontend:
+  app:
     build:
       context: ./frontend
     environment:
-      BACKEND_URL: http://backend:8000
-      NEXT_PUBLIC_API_URL: http://localhost:18000
+      DATABASE_URL: postgresql://smoke:smoke@db:5432/smoke
+      NOOPS_POSTGRES_URL: postgresql://smoke:smoke@db:5432/smoke
     ports:
       - "13000:3000"
     depends_on:
-      - backend
+      db:
+        condition: service_healthy

@@ -1,12 +1,12 @@
-# Noops E2E Smoke App
+# noops-basic-template
 
-Minimal Next.js + FastAPI + PostgreSQL app for testing repository onboarding and deployment flows.
+Minimal noops-ready Next.js + PostgreSQL app for testing repository onboarding
+and deployment flows.
 
 ## Services
 
-- `frontend`: Next.js app on port `3000`
-- `backend`: FastAPI app on port `8000`
-- `db`: PostgreSQL 16
+- `app`: Next.js app on port `3000`
+- `db`: PostgreSQL 16, connected through `DATABASE_URL`
 
 ## Local Run
 
@@ -16,16 +16,11 @@ docker compose up --build
 
 Open through the local host ports:
 
-- Frontend: http://localhost:13000
-- Backend health: http://localhost:18000/api/health
+- App: http://localhost:13000
+- Health: http://localhost:13000/health
+- API health: http://localhost:13000/api/health
 
 ## Environment
 
-Frontend:
-
-- `BACKEND_URL`: server-side URL for the FastAPI service
-- `NEXT_PUBLIC_API_URL`: browser-visible API URL
-
-Backend:
-
 - `DATABASE_URL`: PostgreSQL connection URL
+- `NOOPS_POSTGRES_URL`: optional noops-managed alias for `DATABASE_URL`
